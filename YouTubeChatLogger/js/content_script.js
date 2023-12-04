@@ -45,6 +45,7 @@ function setStorageOne(obj){
   message = decodeHtmlEntities(message); //&とかがエンコードされているのでデコード
 
   if(isOwner){
+    message = removeAfterMarker(message, "<br><br>＞");
     console.log('%c[' + timestamp + '] ' + author + ' : ' + message, 'color:red; font-weight: bold;');
   }else{
     console.log('[' + timestamp + '] ' + author + ' : ' + message);
@@ -72,4 +73,10 @@ function decodeHtmlEntities(str) {
   return str.replace(/&amp;|&lt;|&gt;|&quot;|&apos;/g, function(match) {
     return entities[match];
   });
+}
+
+// マーカー以降を削除
+function removeAfterMarker(str, marker) {
+  var parts = str.split(marker);
+  return parts[0];
 }
