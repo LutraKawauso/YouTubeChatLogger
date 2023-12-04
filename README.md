@@ -15,7 +15,7 @@ YouTubeのチャットをコンソールに出力します。
 
 コンソール上で右クリックして「名前を付けて保存」を選択すると、ログの内容をファイルに保存することができます。
 
-余計なエラーが出ていて邪魔なときは、上部の「top▼」のところから、「YouTube Chat Logger」を探して選択すると、余計なログが出なくなります。
+余計なエラーが出ていて邪魔なときは、上部の「top▼」のところから、「YouTube Chat Logger」を探して選択すると、余計なログが出なくなると思います。。
 
 ![image](https://github.com/LutraKawauso/YouTubeChatLogger/assets/148268606/6c3e9cfa-5264-4e87-84b0-182c50fae5a0)
 
