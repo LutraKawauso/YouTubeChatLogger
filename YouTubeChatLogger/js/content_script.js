@@ -46,6 +46,7 @@ function setStorageOne(obj){
 
   if(isOwner){
     message = removeAfterMarker(message, "<br><br>＞");
+    message = removeHtmlTags(message); //自分へのリプはspanタグが混ざるので除去
     console.log('%c[' + timestamp + '] ' + author + ' : ' + message, 'color:red; font-weight: bold;');
   }else{
     console.log('[' + timestamp + '] ' + author + ' : ' + message);
@@ -58,6 +59,11 @@ function replaceImgTagsWithAltText(str) {
     return str.replace(/<img[^>]*alt="([^"]*)"[^>]*>/g, '$1');
   }
   return '';
+}
+
+// ハイライトHTMLタグを除去
+function removeHtmlTags(str) {
+  return str.replace(/<[^>]+>/g, '');
 }
 
 // HTMLデコード
